@@ -1,22 +1,8 @@
 [
-  {
-    "name": "Tủ lạnh Toshiba Inverter 180L",
-    "price": "5.200.000đ",
-    "image": "images/tulanh.jpg"
-  },
-  {
-    "name": "Máy giặt Panasonic 9kg",
-    "price": "6.800.000đ",
-    "image": "images/maygiat.jpg"
-  },
-  {
-    "name": "Điều hòa Daikin 1.5HP",
-    "price": "9.500.000đ",
-    "image": "images/dieuhoa.jpg"
-  },
-  {
-    "name": "Smart TV Samsung 43 inch 4K",
-    "price": "7.200.000đ",
-    "image": "images/tv.jpg"
-  }
+  { "name": "Tivi Samsung 50 inch", "price": "5.500.000đ", "image": "images/tivi.jpg" },
+  { "name": "Máy giặt LG Inverter", "price": "3.800.000đ", "image": "images/maygiat.jpg" },
+  { "name": "Tủ lạnh Toshiba 180L", "price": "2.900.000đ", "image": "images/tulanh.jpg" },
+  { "name": "Điều hòa Daikin 1HP", "price": "6.200.000đ", "image": "images/maylanh.jpg" },
+  { "name": "Lò vi sóng Sharp 20L", "price": "1.200.000đ", "image": "images/lovisong.jpg" },
+  { "name": "Máy lọc nước Karofi", "price": "4.500.000đ", "image": "images/maylocnuoc.jpg" }
 ]
