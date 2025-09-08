@@ -1,3 +1,4 @@
+/* Reset mặc định */
 * {
   margin: 0;
   padding: 0;
@@ -19,11 +20,13 @@ header {
   background: #003366;
   padding: 15px 50px;
   color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 header .logo {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
 header .logo span {
@@ -32,56 +35,62 @@ header .logo span {
 
 header nav a {
   color: white;
-  margin-left: 20px;
+  margin-left: 25px;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 header nav a:hover {
-  text-decoration: underline;
+  color: #ffcc00;
 }
 
 /* Hero */
 .hero {
   text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
               url("images/store-banner.jpg") center/cover no-repeat;
   color: white;
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 42px;
   margin-bottom: 15px;
+  font-weight: bold;
 }
 
 .hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 25px;
 }
 
 .btn {
   background: #ffcc00;
-  padding: 12px 25px;
-  border-radius: 5px;
+  padding: 14px 28px;
+  border-radius: 8px;
   font-weight: bold;
   color: #333;
   text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
   background: #ff9900;
+  transform: translateY(-3px);
 }
 
 /* Products */
 .products {
-  padding: 40px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .products h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
+  font-size: 30px;
+  margin-bottom: 35px;
+  color: #003366;
 }
 
 .grid {
@@ -94,44 +103,47 @@ header nav a:hover {
 .product {
   background: white;
   border: 1px solid #ddd;
-  border-radius: 10px;
-  width: 250px;
-  padding: 15px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+  border-radius: 12px;
+  width: 260px;
+  padding: 18px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .product:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 .product img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  border-radius: 10px;
+  margin-bottom: 12px;
 }
 
 .product h3 {
-  font-size: 18px;
-  margin-bottom: 5px;
+  font-size: 19px;
+  margin-bottom: 6px;
 }
 
 .product .price {
   color: #e60000;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 /* Contact */
 .contact {
-  padding: 40px 20px;
+  padding: 50px 20px;
   background: #003366;
   color: white;
   text-align: center;
 }
 
 .contact h2 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: bold;
 }
 
 /* Footer */
@@ -139,6 +151,46 @@ footer {
   background: #001a33;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   font-size: 14px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.social-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-btn.facebook {
+  background: #1877f2;
+}
+
+.social-btn.facebook:hover {
+  background: #0d65d9;
+  transform: translateY(-2px);
+}
+
+.social-btn.zalo {
+  background: #06b4ff;
+}
+
+.social-btn.zalo:hover {
+  background: #0099e6;
+  transform: translateY(-2px);
 }
