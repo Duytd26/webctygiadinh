@@ -2,63 +2,13 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cửa hàng Cường Hằng</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f8; }
-    header {
-      background: #2c3e50; color: white; padding: 15px 20px;
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    header h1 { margin: 0; }
-    nav a {
-      color: white; text-decoration: none; margin: 0 10px;
-    }
-    nav a:hover { text-decoration: underline; }
-
-    .hero {
-      background: url("https://picsum.photos/1200/400") center/cover no-repeat;
-      color: white; text-align: center; padding: 100px 20px;
-    }
-    .hero h2 { font-size: 40px; margin-bottom: 10px; }
-    .hero p { font-size: 18px; }
-
-    .container { padding: 40px 20px; }
-    .products {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: white; border-radius: 10px; padding: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center;
-      transition: transform 0.2s;
-    }
-    .card:hover { transform: translateY(-5px); }
-    .card img { max-width: 100%; border-radius: 8px; }
-    .price { color: #e74c3c; font-weight: bold; margin: 10px 0; }
-    .btn {
-      background: #27ae60; color: white; padding: 10px 15px;
-      border: none; border-radius: 5px; cursor: pointer;
-    }
-    .btn:hover { background: #219150; }
-
-    .contact-form {
-      background: white; padding: 20px; border-radius: 10px;
-      max-width: 600px; margin: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .contact-form input, .contact-form textarea {
-      width: 100%; padding: 10px; margin: 10px 0;
-      border: 1px solid #ccc; border-radius: 5px;
-    }
-    footer {
-      background: #2c3e50; color: white; text-align: center; padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+  <title>Điện Máy CH Store</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1>Cường Hằng Store</h1>
+    <div class="logo">📺 Điện Máy <span>CH Store</span></div>
     <nav>
       <a href="#home">Trang chủ</a>
       <a href="#products">Sản phẩm</a>
@@ -66,48 +16,32 @@
     </nav>
   </header>
 
-  <section class="hero" id="home">
-    <h2>Chào mừng đến với Cường Hằng Store</h2>
-    <p>Điện máy & Gia dụng chính hãng - Giá tốt nhất</p>
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <h1>Chào mừng đến với Điện Máy CH Store</h1>
+    <p>Chuyên cung cấp Điện máy & Gia dụng cũ - Giá tốt nhất</p>
+    <a href="#products" class="btn">Xem sản phẩm</a>
   </section>
 
-  <section class="container" id="products">
-    <h2 style="text-align:center;">Sản phẩm nổi bật</h2>
-    <div class="products">
-      <div class="card">
-        <img src="https://via.placeholder.com/250" alt="Tủ lạnh Toshiba">
-        <h3>Tủ lạnh Toshiba 200L</h3>
-        <p class="price">5.500.000₫</p>
-        <button class="btn">Thêm vào giỏ</button>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/250" alt="Máy giặt LG">
-        <h3>Máy giặt LG 8kg</h3>
-        <p class="price">6.200.000₫</p>
-        <button class="btn">Thêm vào giỏ</button>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/250" alt="Điều hòa Daikin">
-        <h3>Điều hòa Daikin 1HP</h3>
-        <p class="price">7.800.000₫</p>
-        <button class="btn">Thêm vào giỏ</button>
-      </div>
-    </div>
+  <!-- Products -->
+  <section id="products" class="products">
+    <h2>Sản phẩm nổi bật</h2>
+    <div id="product-list" class="grid"></div>
   </section>
 
-  <section class="container" id="contact">
-    <h2 style="text-align:center;">Liên hệ với chúng tôi</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Họ và tên" required>
-      <input type="tel" placeholder="Số điện thoại" required>
-      <textarea placeholder="Tin nhắn..." rows="4"></textarea>
-      <button type="submit" class="btn">Gửi</button>
-    </form>
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Liên hệ với chúng tôi</h2>
+    <p>📍 Địa chỉ: số 383-385, ĐT351, An Dương, Hải Phòng</p>
+    <p>☎️ Hotline: 0904 387 853</p>
+    <p>✉️ Email: chstore@gmail.com</p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>📍 Địa chỉ: số 383-385, ĐT351, An Dương, Hải Phòng | ☎️ 0904 387 853</p>
-    <p>© 2025 Cường Hằng Store. All rights reserved.</p>
+    <p>© 2025 Điện Máy CH Store | All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
