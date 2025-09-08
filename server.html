@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cửa hàng Cường Hằng</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; }
+    header { background: #2c3e50; color: white; padding: 20px; text-align: center; }
+    .form-container { background: #fff; padding: 20px; margin: 20px; border-radius: 10px;
+                      box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    .form-container input, .form-container textarea, .form-container button {
+      display: block; width: 100%; margin: 10px 0; padding: 10px;
+    }
+    .container {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px; padding: 20px;
+    }
+    .product {
+      background: white; border-radius: 10px; padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;
+    }
+    .product img { max-width: 100%; border-radius: 8px; }
+    .product h3 { margin: 10px 0 5px; font-size: 18px; }
+    .price { color: #e74c3c; font-weight: bold; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cửa hàng Cường Hằng</h1>
+    <p>Chuyên cung cấp điện máy & gia dụng chính hãng</p>
+  </header>
+
+  <div class="form-container">
+    <h2>➕ Thêm sản phẩm mới</h2>
+    <input type="text" id="productName" placeholder="Tên sản phẩm" required>
+    <input type="number" id="productPrice" placeholder="Giá sản phẩm (VND)" required>
+    <textarea id="productDesc" placeholder="Mô tả ngắn"></textarea>
+    <input type="file" id="productImage" accept="image/*">
+    <button onclick="addProduct()">Thêm sản phẩm</button>
+  </div>
+
+  <div class="container" id="productList"></div>
+
+  <script>
+    function addProduct() {
+      let name = document.getElementById("productName").value;
+      let price = document.getElementById("productPrice").value;
+      let desc = document.getElementById("productDesc").value;
+      let imageInput = document.getElementById("productImage");
+
+      if (!name || !price) {
+        alert("Vui lòng nhập tên và giá sản phẩm!");
+        return;
+      }
+
+      let reader = new FileReader();
+      reader.onload = function(e) {
+        let imgSrc = e.target.result;
+
+        let productDiv = document.createElement("div");
+        productDiv.classList.add("product");
+        productDiv.innerHTML = `
+          <img src="${imgSrc}" alt="${name}">
+          <h3>${name}</h3>
+          <p class="price">${Number(price).toLocaleString()}₫</p>
+          <p>${desc}</p>
+        `;
+
+        document.getElementById("productList").appendChild(productDiv);
+
+        // Reset form
+        document.getElementById("productName").value = "";
+        document.getElementById("productPrice").value = "";
+        document.getElementById("productDesc").value = "";
+        document.getElementById("productImage").value = "";
+      };
+
+      if (imageInput.files[0]) {
+        reader.readAsDataURL(imageInput.files[0]);
+      } else {
+        reader.onload({ target: { result: "https://via.placeholder.com/250" } });
+      }
+    }
+  </script>
+</body>
+</html>
