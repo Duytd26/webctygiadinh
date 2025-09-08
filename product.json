@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Tủ lạnh Toshiba Inverter 180L",
+    "price": "5.200.000đ",
+    "image": "images/tulanh.jpg"
+  },
+  {
+    "name": "Máy giặt Panasonic 9kg",
+    "price": "6.800.000đ",
+    "image": "images/maygiat.jpg"
+  },
+  {
+    "name": "Điều hòa Daikin 1.5HP",
+    "price": "9.500.000đ",
+    "image": "images/dieuhoa.jpg"
+  },
+  {
+    "name": "Smart TV Samsung 43 inch 4K",
+    "price": "7.200.000đ",
+    "image": "images/tv.jpg"
+  }
+]
