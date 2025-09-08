@@ -2,25 +2,56 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Điện Máy CH Store - Điện máy & Gia dụng cũ giá rẻ, chất lượng.">
   <title>Điện Máy CH Store</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- SwiperJS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
   <!-- Header -->
   <header>
-    <div class="logo">🛒 Điện Máy <span>CH Store</span></div>
-    <nav>
+    <div class="logo">⚡ Điện Máy <span>CH Store</span></div>
+    <nav id="nav-menu">
       <a href="#home">Trang chủ</a>
       <a href="#products">Sản phẩm</a>
       <a href="#contact">Liên hệ</a>
     </nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero Slider -->
   <section id="home" class="hero">
-    <h1>Chào mừng đến với Điện Máy CH Store</h1>
-    <p>Chuyên cung cấp Điện máy & Gia dụng cũ - Giá tốt nhất</p>
-    <a href="#products" class="btn">Xem sản phẩm</a>
+    <div class="swiper heroSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url('images/store-banner.jpg')">
+          <div class="hero-text">
+            <h1>Chào mừng đến với Điện Máy CH Store</h1>
+            <p>Điện máy & Gia dụng cũ - Giá tốt nhất</p>
+            <a href="#products" class="btn">Xem sản phẩm</a>
+          </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url('images/banner2.jpg')">
+          <div class="hero-text">
+            <h1>Sản phẩm uy tín - Giá cả hợp lý</h1>
+            <p>Bảo hành đầy đủ, hỗ trợ tận nơi</p>
+          </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url('images/banner3.jpg')">
+          <div class="hero-text">
+            <h1>Ưu đãi hấp dẫn</h1>
+            <p>Giảm giá cực sốc cho khách hàng thân thiết</p>
+          </div>
+        </div>
+      </div>
+      <!-- Nút điều hướng -->
+      <div class="swiper-pagination"></div>
+    </div>
   </section>
 
   <!-- Products -->
@@ -31,26 +62,30 @@
 
   <!-- Contact -->
   <section id="contact" class="contact">
-    <h2>Liên hệ với chúng tôi</h2>
-    <p>📍 Địa chỉ: số 383-385, ĐT351, An Dương, Hải Phòng</p>
-    <p>☎️ Hotline: 0904 387 853</p>
-    <p>✉️ Email: chstore@gmail.com</p>
+    <h2>Liên hệ với chúng tôi!</h2>
+    <p><i class="fas fa-map-marker-alt"></i> 383-385, ĐT351, An Dương, Hải Phòng</p>
+    <p><i class="fas fa-phone"></i> 0904 387 853</p>
+    <p><i class="fas fa-envelope"></i> chstore@gmail.com</p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Họ tên của bạn" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Nội dung liên hệ..." required></textarea>
+      <button type="submit" class="btn">Gửi liên hệ</button>
+    </form>
   </section>
 
   <!-- Footer -->
-  <footer class="contact-footer">
+  <footer>
     <p>© 2025 Điện Máy CH Store | All rights reserved.</p>
-    <p>Kết nối với chúng tôi:</p>
     <div class="social-links">
-      <a href="https://www.facebook.com/tran.inh.cuong.430399" target="_blank" class="social-btn facebook">
-        Facebook
-      </a>
-      <a href="https://zalo.me/0904387853" target="_blank" class="social-btn zalo">
-        Zalo
-      </a>
+      <a href="https://www.facebook.com/tran.inh.cuong.430399" target="_blank" class="social-btn facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="https://zalo.me/0904387853" target="_blank" class="social-btn zalo"><i class="fas fa-comments"></i> Zalo</a>
     </div>
   </footer>
 
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
